@@ -3,7 +3,6 @@
 import sys, os, re
 import pandas as pd
 import feather
-sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'modules'))
 import pop2feather as pf
 import argparse
 import inspect
