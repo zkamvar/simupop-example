@@ -4,7 +4,7 @@ A working example of a failing simuPOP script
 
 This command fails on Ubuntu 14.04 but works on OSX 10.11.6 with python version 3.4 via conda:
 
-```python
+```sh
 python dir2feather.py --prefix testpop -z --group_by rep
 ```
 
