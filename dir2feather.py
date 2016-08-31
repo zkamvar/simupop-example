@@ -1,9 +1,9 @@
 #!/usr/bin/env python3.4
 
 import sys, os, re
+import pop2feather as pf
 import pandas as pd
 import feather
-import pop2feather as pf
 import argparse
 import inspect
 import glob

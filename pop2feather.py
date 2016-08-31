@@ -1,8 +1,5 @@
 #!/usr/bin/env python3.4
-import numpy as np
-import pandas as pd
 import sys, os, re
-import feather
 # Setting up options
 import simuOpt
 simuOpt.setOptions(optimized = False, 
@@ -12,6 +9,8 @@ simuOpt.setOptions(optimized = False,
     quiet = False, 
     numThreads = 0)
 import simuPOP as sim
+import numpy as np
+import pandas as pd
 
 def trim_lociNames(pop):
     '''
