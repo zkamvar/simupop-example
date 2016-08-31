@@ -13,7 +13,7 @@ python -c 'import feather;from simuPOP import *;loadPopulation("seed_0_sex_0.000
 python -c 'from simuPOP import *;import feather;loadPopulation("seed_0_sex_0.0000_gen_00000_rep_00.pop")'
 ```
 
-Commit 54080d0867a0ca31dd89864af1e4a095febcfdc8 fixed the error by placing feather after simuPOP in import order.
+[This commit][1] fixed the error by placing feather after simuPOP in import order.
 
 ## Previously failing command:
 
@@ -38,3 +38,4 @@ I'm trying to figure out why it would fail like this on ubuntu, but be fine on O
 
  
 [0]: https://github.com/BoPeng/simuPOP/issues/3#issuecomment-243834067
+[1]: https://github.com/zkamvar/simupop-example/commit/54080d0867a0ca31dd89864af1e4a095febcfdc8
