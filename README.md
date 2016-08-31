@@ -1,5 +1,17 @@
 #simupop-example
 
+This is a working example of a failing simuPOP script. 
+
+Installation using conda:
+
+```
+conda update --all 
+conda install python=3.4 
+conda install -c https://conda.binstar.org/bpeng simuPOP
+conda install numpy
+pip install feather-format
+```
+
 ## Update 2016-08-31
 
 Over in https://github.com/BoPeng/simuPOP/issues/3, I had found the problem was the [order in which feather and simuPOP were loaded][0]:
@@ -16,8 +28,6 @@ python -c 'from simuPOP import *;import feather;loadPopulation("seed_0_sex_0.000
 [This commit][1] fixed the error by placing feather after simuPOP in import order.
 
 ## Previously failing command:
-
-A working example of a failing simuPOP script
 
 This command fails on Ubuntu 14.04 but works on OSX 10.11.6 with python version 3.4 via conda:
 
