@@ -1,4 +1,21 @@
-# simupop-example
+#simupop-example
+
+## Update 2016-08-31
+
+Over in https://github.com/BoPeng/simuPOP/issues/3, I had found the problem was the [order in which feather and simuPOP were loaded][0]:
+
+```
+git clone https://github.com/zkamvar/simupop-example
+cd simupop-example/testpopp
+# fails
+python -c 'import feather;from simuPOP import *;loadPopulation("seed_0_sex_0.0000_gen_00000_rep_00.pop")'
+# works
+python -c 'from simuPOP import *;import feather;loadPopulation("seed_0_sex_0.0000_gen_00000_rep_00.pop")'
+```
+
+Commit 54080d0867a0ca31dd89864af1e4a095febcfdc8 fixed the error by placing feather after simuPOP in import order.
+
+## Previously failing command:
 
 A working example of a failing simuPOP script
 
@@ -20,4 +37,4 @@ I'm trying to figure out why it would fail like this on ubuntu, but be fine on O
  - [simupop_environment.yml](simupop_environment.yml) is the yaml file exported from conda describing the environment.
 
  
- 
+[0]: https://github.com/BoPeng/simuPOP/issues/3#issuecomment-243834067
